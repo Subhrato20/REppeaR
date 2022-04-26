@@ -1,0 +1,23 @@
+<%- include('partials/footer') %>
+
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Add some Money</h1>
+    <p class="secret-text">Add Money for Transaction</p>
+
+    <form action="/balance" method="POST">
+
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="balance" placeholder="Add Some Money">
+      </div>
+      <a class="btn btn-dark btn" href="/secrets" role="button">Return Home</a>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+
+
+  </div>
+</div>
+<%- include('partials/footer') %>

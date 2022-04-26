@@ -1,0 +1,36 @@
+<%- include('partials/headgov') %>
+<ul class="list-group list-group-flush">
+  <li>
+    <h1>Submitted Documents</h1>
+  </li>
+  <li>
+    <a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
+  </li>
+  <div class="col-md-4">
+    <% imgs.forEach(function(img){ %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <div class="card body text-center mt-1 ">
+          <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">To: <%=img.to%></li>
+            <li class="list-group-item">From: <%=img.from%></li>
+            <li class="list-group-item">Asset Hash: <%=img.asshash%></li>
+            <li class="list-group-item">Path: <%=img.path%></li>
+            <li class="list-group-item">Date: <%=img.date%></li>
+            <li class="list-group-item">
+              <form action="/approve" method="post">
+                <input type="hidden" class="form-control" name="name" value="<%=img.to%>">
+                <input type="text" class="form-control" name="type" placeholder="Approve or Reject">
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </form>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+
+  <%- include('partials/footer') %>

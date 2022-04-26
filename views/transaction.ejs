@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1>Make Transaction</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/maketransaction?id=<%= userfound %>" method="POST">
+            <div class="form-group">
+              <label for="email">Enter Seller Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="text">Enter Amount</label>
+              <input type="text" class="form-control" name="balance">
+            </div>
+            <div class="form-group">
+              <label for="text">Enter Authorizer's Secret Key</label>
+              <input type="text" class="form-control" name="authhash">
+            </div>
+            <div class="form-group">
+              <label for="text">Enter Asset Hash</label>
+              <input type="text" class="form-control" name="asshash">
+            </div>
+            <button type="submit" class="btn btn-dark">Make Transaction</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<%- include('partials/footer') %>

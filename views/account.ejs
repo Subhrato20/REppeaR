@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-3">Your Account</h1>
+    <br>
+    <hr>
+    <% usersWithdata.forEach(function(user){ %>
+      <h3 class="bg-dark text-white">First Name: <%=user.fname%></h3>
+      <h3 class="bg-light text-black">Last Name: <%=user.lname%></h3>
+      <h3 class="bg-dark text-white">Email: <%=user.username%></h3>
+      <h3 class="bg-light text-black">Date of  Birth: <%=user.dob%></h3>
+      <h3 class="bg-dark text-white">Wallet Balance: <%=user.balance%></h3>
+      <h3 class="bg-light text-black">Adhaar Number: <%=user.adhaar%></h3>
+    <% }) %>
+    <hr>
+    <a class="btn btn-dark btn-lg" href="/secrets" role="button">Return Home</a>
+    <a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
+  </div>
+
+<%- include('partials/footer') %>

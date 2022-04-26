@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <form action="/uploadFile" enctype="multipart/form-data" method="post">
+
+          <div class="form-group">
+            <input type="email" class="form-control x" name="email" placeholder="Enter Email">
+            <input type="text" class="form-control x" placeholder="Enter Your Name" name="name">
+            <input type="text" class="form-control x" placeholder="Enter Seller's Name" name="seller">
+            <input type="text" class="form-control x" placeholder="Asset Hash" name="asshash">
+            <input type="file" class="form-control-file b" name="upfile" accept="image/*">
+            <input type="submit" class="btn btn-dark" value="Publish" class="btn btn-default">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <%- include('partials/footer') %>

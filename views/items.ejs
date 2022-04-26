@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<a class="btn btn-dark btn-lg" href="/secrets" role="button">Return Home</a>
+<a class="btn btn-dark btn-lg" href="/transaction" role="button">Buy Property</a>
+<a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
+<div class="col-md-4">
+  <% assets.forEach(function(asset){ %>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <div class="card body text-center mt-1 ">
+        <ul class="list-group list-group-flush">
+
+          <li class="list-group-item">Hash: <%=asset.hash%></li>
+          <li class="list-group-item">Seller Email: <%=asset.email%></li>
+          <li class="list-group-item">Asset Name: <%=asset.assname%></li>
+          <li class="list-group-item">Asset Type: <%=asset.asstype%></li>
+          <li class="list-group-item">Price: <%=asset.amount%></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
+<%- include('partials/footer') %>

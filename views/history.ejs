@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-3">Your Transations</h1>
+    <br>
+    <hr>
+
+    <% users.forEach(function(user){ %>
+      <p class="secret-text">Buyer: <%=user.buyer%></p>
+      <p class="secret-text">Seller: <%=user.seller%></p>
+      <p class="secret-text">Amount: <%=user.amount%></p>
+     <br><br>
+    <% }) %>
+    <hr>
+
+    <a class="btn btn-dark btn-lg" href="/secrets" role="button">Return Home</a>
+    <a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
+  </div>
+<%- include('partials/footer') %>

@@ -1,0 +1,35 @@
+body {
+  background-color: #E8ECEF;
+}
+
+.centered {
+  padding-top: 200px;
+  text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.a {
+  font-size: 150%;
+}
+.btn{
+  margin: 10px 10px 10px 10px;
+}
+.x{
+  margin: 10px 10px 10px 10px;
+}
+
+.b{
+  margin-left: 10px;
+}
+.card{
+  margin: auto;
+width: 60%;
+border: 5px;
+padding: 10px;
+}

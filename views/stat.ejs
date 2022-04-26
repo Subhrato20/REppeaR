@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+<% imgs.forEach(function(img){ %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <div class="card body text-center mt-1 ">
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">To: <%=img.to%></li>
+        <li class="list-group-item">From: <%=img.from%></li>
+        <li class="list-group-item">Asset Hash: <%=img.asshash%></li>
+        <li class="list-group-item">Date: <%=img.date%></li>
+        <li class="list-group-item">Status: <%=img.approved%></li>
+        <li class="list-group-item">Generated Hash: <%=img.imghash%></li>
+      <li class="list-group-item">
+      <a class="btn btn-dark btn-lg" href="/secrets" role="button">Return Home</a>
+      <a class="btn btn-dark btn-lg" href="/transaction" role="button" target="_blank">Buy Property</a>
+      <a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
+      </li></ul>
+    </div>
+  </div>
+</div>
+
+<% }); %>
+
+
+<%- include('partials/footer') %>
